@@ -14,20 +14,26 @@
                 <legend>Address</legend>
 
                 <label for="title">Title</label>
-                <input type="text" id="title" name="title" class="form-input" value="<?php  ?>" autofocus>
+                <input type="text" id="title" name="title" class="form-input" value="<?php if (count($_POST)) echo $_POST["title"] ?>" autofocus>
 
-                <label for="date">Date</label>
-                <input type="text" id="date" name="date" class="form-input" value="<?php ?>">
-        
                 <label for="content">Content</label>
-                <textarea id="content" name="content" cols="35" rows="4"></textarea>
+                <textarea id="content" name="content" cols="35" rows="4"><?php if (count($_POST)) echo $_POST["content"] ?></textarea>
 
                 <label for="author">Author Name</label>
-                <input type="text" id="author" name="author" class="form-input" value="<?php ?>">
+                <input type="text" id="author" name="author" class="form-input" value="<?php if (count($_POST)) echo $_POST["author"] ?>">
 
                 <input type="submit" class="" value="Order!">
             </fieldset>
         </form>
+
+        <section>
+            <?php
+                $jsonData = file_get_contents("data.json");
+                $decode = json_decode($jsonData, true);
+
+                if (isset($decode['data'])) echo messageSection($decode['data']);
+             ?>
+        </section>
     </main>
 </body>
 </html>
