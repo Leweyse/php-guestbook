@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+:root {
+    --clr-green-1: #426A5A;
+    --clr-green-2: #7FB685;
+
+    --clr-fawn: #DDAE7E;
+    --clr-gold: #F2C57C;
+    --clr-coral: #EF6F6C;
+
+    --ff-main: 'Comfortaa';
+}
+
+* {
+    color: var(--clr-green-1);
+    font-family: var(--ff-main);
+    font-weight: 600;
+}
+
 .success_container,
 .error_container {
     display: flex;

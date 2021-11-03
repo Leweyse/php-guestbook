@@ -45,9 +45,4 @@ class PostLoader
 
         file_put_contents("data.json", $json);
     }
-
-    public function getDataJson()
-    {
-        return $this -> oldData;
-    }
 }

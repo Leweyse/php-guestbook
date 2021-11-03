@@ -9,24 +9,26 @@
 </head>
 <body>
     <main>
-        <form method="post">
-            <fieldset>
-                <legend>Address</legend>
+        <section class="form-section">
+            <form method="post">
+                <fieldset>
+                    <legend>Leave your message!</legend>
 
-                <label for="title">Title</label>
-                <input type="text" id="title" name="title" class="form-input" value="<?php if (count($_POST)) echo $_POST["title"] ?>" autofocus>
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" class="form_input" value="<?php if (count($_POST)) echo $_POST["title"] ?>" autofocus>
 
-                <label for="content">Content</label>
-                <textarea id="content" name="content" cols="35" rows="4"><?php if (count($_POST)) echo $_POST["content"] ?></textarea>
+                    <label for="content">Content</label>
+                    <textarea id="content" name="content" cols="35" rows="4"><?php if (count($_POST)) echo $_POST["content"] ?></textarea>
 
-                <label for="author">Author Name</label>
-                <input type="text" id="author" name="author" class="form-input" value="<?php if (count($_POST)) echo $_POST["author"] ?>">
+                    <label for="author">Author Name</label>
+                    <input type="text" id="author" name="author" class="form_input" value="<?php if (count($_POST)) echo $_POST["author"] ?>">
 
-                <input type="submit" class="" value="Order!">
-            </fieldset>
-        </form>
+                    <input type="submit" class="" value="Order!">
+                </fieldset>
+            </form>
+        </section>
 
-        <section>
+        <section class="msg-section">
             <?php
                 $jsonData = file_get_contents("data.json");
                 $decode = json_decode($jsonData, true);
