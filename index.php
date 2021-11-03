@@ -1,19 +1,25 @@
 <?php
 declare(strict_types=1);
 
-// require 'models/[...].php';
+require "models/PostLoader.php";
+require "models/Post.php";
 
-// session_start();
+include "helpers/test_input.php";
 
-// include "helpers/[...].php";
-
+include "components/info.component.php";
 include "components/error.component.php";
 include "components/success.component.php";
 
-// include "sections/[...].section.php";
+include "sections/messages.section.php";
 
 if($_SERVER['REQUEST_METHOD']=='POST') {
     $post = new Post();
+    $post -> validateFields();
+
+    if ($post -> getValidation()) {
+        $loader = new PostLoader($post);
+        $loader -> setEncoded();
+    }
 }
 
 require 'public/view.php';
