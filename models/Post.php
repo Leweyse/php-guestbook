@@ -32,10 +32,7 @@ class Post
         if (count($this -> errors) > 0) {
             $this -> validated = false;
             foreach ($this -> errors as $error) errorComponent($error);
-        } else {
-            $this -> validated = true;
-            successComponent("Added message!");
-        }
+        } else $this -> validated = true;
     }
 
     public function getValidation() : bool

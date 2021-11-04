@@ -8,7 +8,6 @@ include "helpers/test_input.php";
 
 include "components/info.component.php";
 include "components/error.component.php";
-include "components/success.component.php";
 
 include "sections/messages.section.php";
 
