@@ -13,7 +13,7 @@ include "sections/messages.section.php";
 
 if($_SERVER['REQUEST_METHOD']=='POST') {
     $post = new Post();
-    $post -> validateFields();
+    $post -> setValidation();
 
     if ($post -> getValidation()) {
         $loader = new PostLoader($post);

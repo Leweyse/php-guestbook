@@ -23,7 +23,7 @@ class Post
         }
     }
 
-    public function validateFields() : void
+    public function setValidation() : void
     {
         foreach ($this -> fields as $key => $field) {
             if ($this -> data[$key] == "") array_push($this -> errors, ucfirst("$field is required!" . "<br>"));
