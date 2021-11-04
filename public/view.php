@@ -14,16 +14,22 @@
                 <fieldset>
                     <legend>Leave your message!</legend>
 
-                    <label for="title">Title</label>
-                    <input type="text" id="title" name="title" class="form_input" value="<?php if (count($_POST)) echo $_POST["title"] ?>" autofocus>
+                    <div class="form_input">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" value="<?php if (count($_POST)) echo $_POST["title"] ?>" autocomplete="FALSE" autofocus>
+                    </div>
 
-                    <label for="content">Content</label>
-                    <textarea id="content" name="content" cols="35" rows="4"><?php if (count($_POST)) echo $_POST["content"] ?></textarea>
+                    <div class="form_input">
+                        <label for="content">Content</label>
+                        <textarea id="content" name="content" cols="35" rows="4" autocomplete="FALSE"><?php if (count($_POST)) echo $_POST["content"] ?></textarea>
+                    </div>
 
-                    <label for="author">Author Name</label>
-                    <input type="text" id="author" name="author" class="form_input" value="<?php if (count($_POST)) echo $_POST["author"] ?>">
+                    <div class="form_input">
+                        <label for="author">Author Name</label>
+                        <input type="text" id="author" name="author" value="<?php if (count($_POST)) echo $_POST["author"] ?>" autocomplete="FALSE">
+                    </div>
 
-                    <input type="submit" class="" value="Order!">
+                    <input type="submit" class="submit" value="Add Message">
                 </fieldset>
             </form>
         </section>

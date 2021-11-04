@@ -6,6 +6,7 @@ GuestBook with OOP (Object Oriented Programming).
 
 ## The Mission
 Let's remember the internet of the 1990, and create a classic widget that every site in that decade had: a guestbook.
+<img src="assets/preview.png" width="100%">
 
 ## Features
 - Interacting with User (input).
